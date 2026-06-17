@@ -1,0 +1,10 @@
+name: 2nd workflow
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code from gh
+        uses: actions/checkout@v3
+      - name: run test
+        run: npm test
