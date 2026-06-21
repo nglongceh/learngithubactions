@@ -2,7 +2,7 @@ name: 04-workflow-push
 on:
   push:
     paths:
-      - 'D:\Study\GithubActions\04+Practice+Project+(Start)\04 Practice Project (Start)/*'
+      - '04+Practice+Project+(Start)/**'
 jobs:
   lint:
     runs-on: ubuntu-latest
