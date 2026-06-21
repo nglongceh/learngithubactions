@@ -1,9 +1,17 @@
 name: 04-workflow-push
+
 on:
   push:
     paths:
-      - '04+Practice+Project+(Start)/04 Practice Project (Start)/**'
+      - '04+Practice+Project+(Start)/**'
+
 jobs:
+  testing_path:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check path running
+        run: echo "${{ github.workspace }}"
+
   lint:
     runs-on: ubuntu-latest
     steps:
