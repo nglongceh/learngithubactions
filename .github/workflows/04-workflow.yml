@@ -1,8 +1,8 @@
 name: 04-workflow-push
 on:
   push:
-    paths:
-      - '04+Practice+Project+(Start)/**'
+#    paths:
+#      - '04+Practice+Project+(Start)/**'
 jobs:
   lint:
     runs-on: ubuntu-latest
