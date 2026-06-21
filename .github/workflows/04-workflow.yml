@@ -1,6 +1,7 @@
 name: 04-workflow-push
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '04+Practice+Project+(Start)/**'
