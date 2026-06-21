@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - '04+Practice+Project+(Start)/**'
+      - '04+Practice+Project+(Start)/04 Practice Project (Start)/**'
 
 jobs:
   testing_path:
