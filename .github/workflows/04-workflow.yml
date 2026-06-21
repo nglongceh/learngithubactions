@@ -2,7 +2,7 @@ name: 04-workflow-push
 on:
   push:
     paths:
-      - '04+Practice+Project+(Start)/**'
+      - 'D:\Study\GithubActions\04+Practice+Project+(Start)\04 Practice Project (Start)/*'
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -14,8 +14,19 @@ jobs:
           echo "Running lint"
           npm run lint
 
-  build:
+  test:
     needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run test script
+        run: |
+          echo "Running test"
+          npm run test
+
+  build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
